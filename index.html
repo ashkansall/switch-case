@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex: switch case</title>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: rgba(196, 165, 181, 0.8);
+        }
+        .weekdays{
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: rgba(112, 71, 92, 0.8);
+            box-shadow: 5px 5px 5px 5px #FFCDD2;
+            border: 1px solid;
+            margin: 100px auto;
+            z-index: -1;
+        }
+        .weekdays p{
+            margin-top: 130px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>this is how to use Switch Case function</h1>
+    <hr />
+
+    <div class="weekdays">
+        <p id="text"></p>
+    </div>
+    <script>
+        'use strict';
+        let day;
+        switch (new Date().getDay()) {
+            //getDay is a func that show weekdays.
+            case 1:
+                // day variable needs to be specify at first.
+                day = "today is Monday";
+                break;
+            case 2:
+                day = "today is Tuesday";
+                break;
+            case 3:
+                day = "today is Wednesday";
+                break;
+            case 4:
+                day = "today is Thursday";
+                break;
+            case 5:
+                day = "today is Friday";
+                break;
+            case 6:
+                day = "today is saturday";
+                break;
+            case 0:
+                 day = "today is sunday";
+                break;
+            default:
+                day = "Looking forward to the Weekend";
+                alert("Looking forward to the Weekend");
+        }
+        //no need to use order between days or cases.
+        document.getElementById("text").innerHTML = day;
+        // if day is unknow, switch case will not work.
+    </script>
+</body>
+</html>
